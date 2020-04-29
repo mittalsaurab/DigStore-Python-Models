@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from searchModule import Predict
-import os
+# import os
 app = Flask(__name__)
 
 @app.route('/')
@@ -16,7 +16,7 @@ def hi():
 		f.save(path)
 		prediction = "alai_minar"
 		prediction = Predict(path)
-		os.remove(path)
+# 		os.remove(path)
 		return render_template('index.html',your_prediction=prediction)
 
 if __name__ == '__main__':
